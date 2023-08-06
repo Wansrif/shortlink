@@ -1,0 +1,124 @@
+@import '@styles/base';
+
+.shortenResultItem {
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  background-color: $color-white;
+  margin-bottom: 1rem;
+  position: relative;
+
+  @include apply-at-xs-size {
+    @include directionY;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  @include apply-at-lg-size {
+    @include directionX;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .shortenResultItemClose {
+    position: absolute;
+    top: -0.8rem;
+    left: -0.75rem;
+    cursor: pointer;
+
+    background-color: red;
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: $color-white;
+    transition: background-color 0.3s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $dark-violet;
+    }
+  }
+
+  .shortenResultItemLink {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $very-dark-blue;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:hover {
+      color: $cyan;
+    }
+
+    @include apply-at-xs-size {
+      border-bottom: 1px solid $gray;
+    }
+
+    @include apply-at-lg-size {
+      border-bottom: none;
+    }
+  }
+
+  .shortenResultItemWrapper {
+    @include apply-at-xs-size {
+      @include directionY;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    @include apply-at-lg-size {
+      @include directionX;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .shortenResultItemShortLink {
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $cyan;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $dark-cyan;
+      }
+    }
+
+    .shortenResultItemButton {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+      color: $color-white;
+      background-color: $cyan;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+
+      transition: background-color 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $dark-violet;
+      }
+
+      @include apply-at-xs-size {
+        width: 100%;
+      }
+
+      @include apply-at-lg-size {
+        min-width: 10rem;
+      }
+    }
+  }
+}

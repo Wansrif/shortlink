@@ -1,0 +1,47 @@
+@import '@styles/base';
+
+.statisticItem {
+  @include directionY;
+  flex: 1;
+  gap: 1rem;
+  background-color: var(--color-bg);
+  border-radius: 0.5rem;
+  position: relative;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  height: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+  .statisticItemIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: $dark-violet;
+    width: fit-content;
+
+    position: absolute;
+    top: -2rem;
+
+    color: $cyan;
+  }
+
+  .statisticItemDescription {
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $grayish-violet;
+    margin-bottom: 1.5rem;
+  }
+
+  @include apply-at-xs-size {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    .statisticItemDescription {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@mixin directionY {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin directionX {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-2);
+  color: var(--color-text);
+}

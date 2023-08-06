@@ -6,8 +6,6 @@ Shortly is a shortlink app that utilizes the [Shrtcode API](https://api.shrtco.d
 
 ## Demo
 
-![Screenshot](screenshot.png)
-
 [Live Demo](https://wanrif-shortly.netlify.app/)
 
 ## Features
@@ -45,6 +43,11 @@ yarn start
 - Redux Saga
 - Material-UI (MUI)
 - SCSS
+
+## Screenshots
+
+![Screenshot 1](public/screenshot1.png)
+![Screenshot 2](public/screenshot2.png)
 
 ## Language Support
 
